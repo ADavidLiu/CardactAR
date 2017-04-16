@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palabra</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header class="container-fluid header">
+        <div class="row">
+            <div class="col-xs-12 header__info">
+                <div class="header__title-wrapper">
+                    <i class="fa fa-chevron-left header__arrow" aria-hidden="true"></i>
+                    <h1 class="header__title"><span class="palabra__pinyin"></span> - <span class="palabra__caracter"></span></h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container content">
+        <div class="row content__row">
+            <div class="palabra">
+                <div class="shadow palabra__trazado" id="trazado">
+                    <div class="palabra__trazado-reiniciar">
+                        <i class="fa fa-repeat palabra__trazado-reiniciar-icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="clearfix shadow palabra__info">
+                    <div class="palabra__info-item palabra__info-item--pinyin">
+                        <h3 class="palabra__info-item-titulo">Transliteración</h3>
+                        <span class="palabra__info-item-valor palabra__pinyin"></span>
+                    </div>
+                    <div class="palabra__info-item palabra__info-item--pinyin">
+                        <div class="palabra__pronunciacion">
+                            <i class="fa fa-play palabra__pronunciacion-icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="palabra__info-item palabra__info-item--pinyin">
+                        <h3 class="palabra__info-item-titulo">Traducción</h3>
+                        <span class="palabra__info-item-valor palabra__traduccion"></span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <h3 class="palabra__agregar">Añadir a lista</h3>
+                </div>
+                <div class="palabra__etimologia">
+                    <h2 class="palabra__etimologia-title">Significado</h2>
+                    <p class="palabra__etimologia-descripcion"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/modules/hanzi-writer.min.js"></script>
+    <script src="js/modules/cjst.js.js"></script>
+    <script src="js/modules/jquery.voicerss-tts.min.js"></script>
+    <script src="js/modules/jquery.matchHeight-min.js"></script>
+    <script src="js/palabra.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+// Font imports and stacks
+
+@font-face {
+    src: url("../fonts/Stellar-Regular.otf");
+    font-family: "Stellar";
+}
+
+@font-face {
+    src: url("../fonts/Reef.otf");
+    font-family: "Reef";
+}
+
+$content: "Stellar", sans-serif;
+$bold: "Reef", sans-serif;
+
+// Colors
+$gradient: linear-gradient(45deg, #EB3349 0%, #EB3349 0%, #EB3349 0%, #F45C43 100%);
+$text: #4F505A;
+$white: #ffffff;
+$bg: #F2F2F2;
+$brand: #EB3349;
+$accent: #F45C43;

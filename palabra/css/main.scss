@@ -1,0 +1,32 @@
+/*------------- BASE IMPORT -------------*/
+
+@import "_variables.scss";
+@import "_base.scss";
+
+
+/*------------- UTILITIES IMPORT -------------*/
+
+@import "_utilities.scss";
+
+
+/*------------- MODULES IMPORT -------------*/
+
+/*------------- TABLE OF CONTENTS -------------*/
+
+
+/*
+
+    1. HEADER
+    2. PALABRA
+
+*/
+
+
+/*------------- 1. HEADER -------------*/
+
+@import "modules/_header.scss";
+
+
+/*------------- 2. PALABRA -------------*/
+
+@import "modules/_palabra.scss";

@@ -1,0 +1,23 @@
+/*------------- UTILITY CLASSES -------------*/
+
+@mixin atSmall {
+    @media screen and (min-width: 768px) {
+        @content
+    }
+}
+
+@mixin atMedium {
+    @media screen and (min-width: 992px) {
+        @content
+    }
+}
+
+@mixin atLarge {
+    @media screen and (min-width: 1200px) {
+        @content
+    }
+}
+
+.shadow {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}

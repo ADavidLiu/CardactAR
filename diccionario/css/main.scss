@@ -1,0 +1,44 @@
+/*------------- BASE IMPORT -------------*/
+
+@import "_variables.scss";
+@import "_base.scss";
+
+
+/*------------- UTILITIES IMPORT -------------*/
+
+@import "_utilities.scss";
+
+
+/*------------- MODULES IMPORT -------------*/
+
+/*------------- TABLE OF CONTENTS -------------*/
+
+
+/*
+
+    1. HEADER
+    2. CONTENT
+    3. DICCIONARIO
+    4. PALABRA
+
+*/
+
+
+/*------------- 1. HEADER -------------*/
+
+@import "modules/_header.scss";
+
+
+/*------------- 2. CONTENT -------------*/
+
+@import "modules/_content.scss";
+
+
+/*------------- 3. DICCIONARIO -------------*/
+
+@import "modules/_diccionario.scss";
+
+
+/*------------- 4. PALABRA -------------*/
+
+@import "modules/_palabra.scss";

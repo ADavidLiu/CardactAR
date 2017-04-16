@@ -1,0 +1,197 @@
+.opcion {
+    padding: 1.5rem 1.5625rem 0 1.5625rem;
+    position: relative;
+    &__trazado {
+        position: relative;
+        background-color: $white;
+        height: 400px;
+        border-radius: 0.5rem;
+        &-pronunciar {
+            position: absolute;
+            z-index: 3;
+            top: 1rem;
+            right: 1rem;
+            width: 2rem;
+            height: 2rem;
+            background: $gradient;
+            border-radius: 100%;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            &-icon {
+                position: absolute;
+                top: 50%;
+                left: 60%;
+                transform: translate(-60%, -50%);
+                color: $white;
+            }
+        }
+        &-caracter {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20rem;
+            font-family: $caracter;
+            color: $brand;
+        }
+    }
+    &__pregunta {
+        &-titulo {
+            font-family: $bold;
+            font-size: 2rem;
+            margin: 1.5rem 0;
+            color: $text;
+            @include atSmall {
+                font-size: 2rem;
+            }
+        }
+    }
+    &__info {
+        background-color: $white;
+        border-radius: 0.5rem;
+        margin-top: 2rem;
+        &-item {
+            display: inline-block;
+            float: left;
+            padding: 1rem 0;
+            width: 33.33%;
+            height: 100%;
+            min-height: 68px;
+            text-align: center;
+            &+& {
+                border-left: 1px solid $bg;
+            }
+            &-titulo {
+                color: $brand;
+                font-family: $bold;
+                font-size: 1.5rem;
+            }
+            &-valor {
+                font-family: $text;
+                font-size: 1.5rem;
+                color: $text;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+    &__agregar {
+        text-align: center;
+        background: $gradient;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        padding: 1rem;
+        color: $white;
+        font-family: $bold;
+        cursor: pointer;
+    }
+    &__pronunciacion {
+        cursor: pointer;
+        margin: 0 auto;
+        border-radius: 100%;
+        width: 3.5rem;
+        height: 3.5rem;
+        position: relative;
+        border: 3px solid $brand;
+        &-icon {
+            color: $brand;
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            transform: translate(-60%, -50%);
+            font-size: 1.5rem;
+        }
+    }
+    &__item {
+        font-family: $text;
+        font-size: 1.125rem;
+        color: $text;
+        transition: all .25s;
+        cursor: pointer;
+        padding: 0.5rem 0.5rem 0.5rem 0;
+        font-weight: 400;
+        border-radius: 0.2rem;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        background-color: $white;
+        padding: 1rem 1rem 1rem 2rem;
+        & + & {
+            margin-top: 1rem;
+        }
+        &--selected {
+            background: linear-gradient(45deg, #EB3349 0%, #EB3349 0%, #EB3349 0%, #F45C43 100%);
+            color: $white;
+        }
+        &:last-child {
+            margin-bottom: 2rem;
+        }
+    }
+    &__acciones {
+        width: 100%;
+        &-btn {
+            font-family: $bold;
+            font-size: 1.5rem;
+            padding: 0;
+            outline: none;
+            border: 0;
+            width: 50%;
+            float: left;
+            height: 50px;
+            &--line {
+                background-color: transparent;
+                border: 2px solid $brand;
+                border-bottom-left-radius: 0.5rem;
+                border-top-left-radius: 0.5rem;
+                color: $brand;
+            }
+            &--full {
+                background: $gradient;
+                border-bottom-right-radius: 0.5rem;
+                border-top-right-radius: 0.5rem;
+                color: $white;
+            }
+        }
+    }
+    &__mensaje {
+        font-size: 2rem;
+        color: $white;
+        font-family: $bold;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        &-wrapper {
+            position: absolute;
+            z-index: 4;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 80%;
+            padding: 3rem 2rem;
+            background: $gradient;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            opacity: 0;
+            transition: all .25s;
+            &--active {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    }
+    &__progreso {
+        margin-top: 1rem;
+        width: 100%;
+        height: 5px;
+        background-color: $white;
+        border-radius: 3px;
+        position: relative;
+        margin-bottom: 2rem;
+        &-completado {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60%;
+            background: $gradient;
+            height: 5px;
+            border-radius: 3px;
+        }
+    }
+}

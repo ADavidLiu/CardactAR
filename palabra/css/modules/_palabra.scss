@@ -1,0 +1,102 @@
+.palabra {
+    padding: 1.5rem 1.5625rem 0 1.5625rem;
+    &__trazado {
+        position: relative;
+        background-color: $white;
+        height: 400px;
+        border-radius: 0.5rem;
+        &-reiniciar {
+            position: absolute;
+            z-index: 3;
+            top: 1rem;
+            right: 1rem;
+            width: 2rem;
+            height: 2rem;
+            background: $gradient;
+            border-radius: 100%;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            &-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $white;
+            }
+        }
+    }
+    &__info {
+        background-color: $white;
+        border-radius: 0.5rem;
+        margin-top: 2rem;
+        &-item {
+            display: inline-block;
+            float: left;
+            padding: 1rem 0;
+            width: 33.33%;
+            height: 100%;
+            min-height: 68px;
+            text-align: center;
+            & + & {
+                border-left: 1px solid $bg;
+            }
+            &-titulo {
+                color: $brand;
+                font-family: $bold;
+                font-size: 1.5rem;
+            }
+            &-valor {
+                font-family: $text;
+                font-size: 1.5rem;
+                color: $text;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+    &__agregar {
+        text-align: center;
+        background: $gradient;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        padding: 1rem;
+        color: $white;
+        font-family: $bold;
+        cursor: pointer;
+    }
+    &__pronunciacion {
+        cursor: pointer;
+        margin: 0 auto;
+        border-radius: 100%;
+        width: 3.5rem;
+        height: 3.5rem;
+        position: relative;
+        border: 3px solid $brand;
+        &-icon {
+            color: $brand;
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            transform: translate(-60%, -50%);
+            font-size: 1.5rem;
+        }
+    }
+    &__etimologia {
+        max-width: 330px;
+        padding-top: 1.5rem;
+        &-title {
+            font-size: 2rem;
+            color: $brand;
+            font-family: $bold;
+        }
+        &-descripcion {
+            font-family: $text;
+            font-size: 1.125rem;
+            color: $text;
+            font-weight: 300;
+            margin-top: 1rem;
+            &:first-letter {
+                text-transform: uppercase;
+            }
+        }
+    }
+}

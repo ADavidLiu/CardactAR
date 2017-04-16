@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opción Múltiple</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header class="container-fluid header">
+        <div class="row">
+            <div class="col-xs-12 header__info">
+                <div class="header__title-wrapper">
+                    <i class="fa fa-chevron-left header__arrow" aria-hidden="true"></i>
+                    <h1 class="header__title"><span class="opcion__pinyin"></span> - <span class="opcion__caracter"></span></h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container content">
+        <div class="row content__row">
+            <div class="opcion">
+                <div class="opcion__mensaje-wrapper">
+                    <h3 class="opcion__mensaje"></h3>
+                </div>
+                <div class="opcion__header">
+                    <div class="opcion__progreso">
+                        <div class="opcion__progreso-completado"></div>
+                    </div>
+                </div>
+                <div class="shadow opcion__trazado" id="pronunciacion">
+                    <h1 class="opcion__trazado-caracter"></h1>
+                    <div class="opcion__trazado-pronunciar">
+                        <i class="fa fa-play opcion__trazado-pronunciar-icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="opcion__pregunta">
+                    <h3 class="opcion__pregunta-titulo">¿Qué significa este caracter?</h3>
+                    <ul class="opcion__lista"></ul>
+                </div>
+                <div class="opcion__acciones">
+                    <button class="opcion__acciones-btn opcion__acciones-btn--line opcion__acciones-btn--ayuda">Ayuda</button>
+                    <button class="opcion__acciones-btn opcion__acciones-btn--full opcion__acciones-btn--siguiente">Revisar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/modules/cjst.js.js"></script>
+    <script src="js/modules/jquery.voicerss-tts.min.js"></script>
+    <script src="js/opcion.js"></script>
+
+</body>
+
+</html>

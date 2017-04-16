@@ -1,0 +1,67 @@
+.diccionario {
+    padding: 2rem 0;
+    &__search {
+        &-input {
+            height: 30px;
+            padding: 0 3.5rem 0 1.5rem;
+            border: 1px solid $text;
+            border-radius: 0.8rem;
+            background-color: transparent;
+            width: 100%;
+            font-family: $bold;
+            color: $text;
+            font-size: 1.2rem;
+             ::-webkit-input-placeholder {
+                color: $text;
+            }
+            ::-moz-placeholder {
+                color: $text;
+            }
+            :-ms-input-placeholder {
+                color: $text;
+            }
+            :-moz-placeholder {
+                color: $text;
+            }
+        }
+        &-input-group {
+            position: relative;
+            height: 30px;
+            width: 80%;
+            display: inline-block;
+            float: left;
+        }
+        &-icon {
+            position: absolute;
+            top: 50%;
+            right: 1.5rem;
+            transform: translateY(-50%);
+            color: $text;
+        }
+        &-actions {
+            display: inline-block;
+            width: 20%;
+            float: left;
+            text-align: right;
+            &-list {
+                width: 100%;
+                margin: 0;
+                cursor: pointer;
+            }
+            &-item {
+                padding: 0 0.5rem !important;
+                &:last-child {
+                    padding-right: 0 !important;
+                }
+            }
+            &-icon {
+                font-size: 1.5rem;
+                color: $text;
+                line-height: 30px;
+            }
+        }
+    }
+    &__resultados {
+        margin-top: 2rem;
+    }
+}

@@ -1,0 +1,216 @@
+/*------------- BASE IMPORT -------------*/
+@font-face {
+  src: url("../../fonts/Stellar-Regular.otf");
+  font-family: "Stellar"; }
+
+@font-face {
+  src: url("../../fonts/Reef.otf");
+  font-family: "Reef"; }
+
+html,
+body {
+  overflow-x: hidden;
+  font-size: 12px;
+  background-color: #F2F2F2; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul,
+ol,
+span {
+  margin: 0;
+  padding: 0; }
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0; }
+
+input,
+button {
+  border: none; }
+  input:focus,
+  button:focus {
+    outline: none; }
+
+::-moz-selection {
+  background-color: #F45C43;
+  color: #ffffff; }
+
+::selection {
+  background-color: #F45C43;
+  color: #ffffff; }
+
+@media screen and (min-width: 768px) {
+  html,
+  body {
+    font-size: 14px; } }
+
+@media screen and (min-width: 992px) {
+  html,
+  body {
+    font-size: 15px; } }
+
+@media screen and (min-width: 1200px) {
+  html,
+  body {
+    font-size: 16px; } }
+
+/*------------- UTILITIES IMPORT -------------*/
+/*------------- UTILITY CLASSES -------------*/
+.shadow {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+/*------------- MODULES IMPORT -------------*/
+/*------------- TABLE OF CONTENTS -------------*/
+/*
+
+    1. HEADER
+    2. PALABRA
+
+*/
+/*------------- 1. HEADER -------------*/
+.header {
+  background: linear-gradient(45deg, #EB3349 0%, #EB3349 0%, #EB3349 0%, #F45C43 100%);
+  padding: 0;
+  color: #ffffff; }
+  .header__title-wrapper {
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #F2F2F2;
+    padding: 1rem 1.5625rem; }
+  .header__title {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-family: "Reef", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .header__arrow {
+    position: absolute;
+    top: 50%;
+    left: 1.5625rem;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer; }
+  .header__content {
+    padding: 1rem 1.5625rem; }
+  .header__caligrafia {
+    text-align: center; }
+    .header__caligrafia-tema-wrapper, .header__caligrafia-puntaje-wrapper {
+      display: inline-block;
+      text-align: center; }
+    .header__caligrafia-tema-wrapper {
+      padding: 0 1.25rem 0 0;
+      border-right: 1px solid #F2F2F2; }
+    .header__caligrafia-puntaje-wrapper {
+      padding: 0 0 0 1.25rem; }
+    .header__caligrafia-label {
+      font-family: "Reef", sans-serif;
+      font-size: 2rem;
+      color: #F2F2F2;
+      margin-bottom: 0.3rem; }
+    .header__caligrafia-valor {
+      font-family: "Reef", sans-serif;
+      font-size: 1.25rem;
+      color: #F2F2F2;
+      text-transform: uppercase;
+      letter-spacing: 1px; }
+
+/*------------- 2. PALABRA -------------*/
+.palabra {
+  padding: 1.5rem 1.5625rem 0 1.5625rem; }
+  .palabra__trazado {
+    position: relative;
+    background-color: #ffffff;
+    height: 400px;
+    border-radius: 0.5rem; }
+    .palabra__trazado-reiniciar {
+      position: absolute;
+      z-index: 3;
+      top: 1rem;
+      right: 1rem;
+      width: 2rem;
+      height: 2rem;
+      background: linear-gradient(45deg, #EB3349 0%, #EB3349 0%, #EB3349 0%, #F45C43 100%);
+      border-radius: 100%;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+      .palabra__trazado-reiniciar-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        color: #ffffff; }
+  .palabra__info {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    margin-top: 2rem; }
+    .palabra__info-item {
+      display: inline-block;
+      float: left;
+      padding: 1rem 0;
+      width: 33.33%;
+      height: 100%;
+      min-height: 68px;
+      text-align: center; }
+      .palabra__info-item + .palabra__info-item {
+        border-left: 1px solid #F2F2F2; }
+      .palabra__info-item-titulo {
+        color: #EB3349;
+        font-family: "Reef", sans-serif;
+        font-size: 1.5rem; }
+      .palabra__info-item-valor {
+        font-family: #4F505A;
+        font-size: 1.5rem;
+        color: #4F505A;
+        margin-top: 1.5rem; }
+  .palabra__agregar {
+    text-align: center;
+    background: linear-gradient(45deg, #EB3349 0%, #EB3349 0%, #EB3349 0%, #F45C43 100%);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 1rem;
+    color: #ffffff;
+    font-family: "Reef", sans-serif;
+    cursor: pointer; }
+  .palabra__pronunciacion {
+    cursor: pointer;
+    margin: 0 auto;
+    border-radius: 100%;
+    width: 3.5rem;
+    height: 3.5rem;
+    position: relative;
+    border: 3px solid #EB3349; }
+    .palabra__pronunciacion-icon {
+      color: #EB3349;
+      position: absolute;
+      top: 50%;
+      left: 60%;
+      -webkit-transform: translate(-60%, -50%);
+      -ms-transform: translate(-60%, -50%);
+      transform: translate(-60%, -50%);
+      font-size: 1.5rem; }
+  .palabra__etimologia {
+    max-width: 330px;
+    padding-top: 1.5rem; }
+    .palabra__etimologia-title {
+      font-size: 2rem;
+      color: #EB3349;
+      font-family: "Reef", sans-serif; }
+    .palabra__etimologia-descripcion {
+      font-family: #4F505A;
+      font-size: 1.125rem;
+      color: #4F505A;
+      font-weight: 300;
+      margin-top: 1rem; }
+      .palabra__etimologia-descripcion:first-letter {
+        text-transform: uppercase; }

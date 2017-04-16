@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caligrafía</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header class="container-fluid header">
+        <div class="row">
+            <div class="col-xs-12 header__info">
+                <div class="header__title-wrapper">
+                    <i class="fa fa-chevron-left header__arrow" aria-hidden="true"></i>
+                    <h1 class="header__title">Lista de estudio</h1>
+                </div>
+                <div class="header__content header__caligrafia">
+                    <div class="header__caligrafia-tema-wrapper">
+                        <h3 class="header__caligrafia-label">Tema</h3>
+                        <h4 class="header__caligrafia-valor">Naturaleza</h4>
+                    </div>
+                    <div class="header__caligrafia-puntaje-wrapper">
+                        <h3 class="header__caligrafia-label">Puntaje</h3>
+                        <h4 class="header__caligrafia-valor"><i class="fa fa-certificate" aria-hidden="true"></i> 100</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container content">
+        <div class="row content__row">
+            <div class="pruebas">
+                <div class="pruebas__mensaje-wrapper">
+                    <h3 class="pruebas__mensaje"></h3>
+                </div>
+                <div class="pruebas__header">
+                    <div class="pruebas__progreso">
+                        <div class="pruebas__progreso-completado"></div>
+                    </div>
+                    <h3 class="content__label">Escribe el caracter para “Perro”</h3>
+                </div>
+                <div class="pruebas__caligrafia">
+                    <div class="pruebas__reiniciar">
+                        <i class="fa fa-repeat pruebas__reiniciar-icon" aria-hidden="true"></i>
+                    </div>
+                    <div class="caligrafia" id="caligrafia"></div>
+                    <div class="pruebas__acciones">
+                        <button class="pruebas__acciones-btn pruebas__acciones-btn--line pruebas__acciones-btn--ayuda">Ayuda</button>
+                        <button class="pruebas__acciones-btn pruebas__acciones-btn--full pruebas__acciones-btn--siguiente">Revisar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/addons/p5.dom.min.js"></script>
+    <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
+    <script src="js/caligrafia.js"></script>
+
+</body>
+
+</html>

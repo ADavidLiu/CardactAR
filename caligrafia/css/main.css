@@ -1,0 +1,232 @@
+/*------------- BASE IMPORT -------------*/
+@font-face {
+  src: url("../fonts/Stellar-Regular.otf");
+  font-family: "Stellar"; }
+
+@font-face {
+  src: url("../fonts/Reef.otf");
+  font-family: "Reef"; }
+
+html,
+body {
+  overflow-x: hidden;
+  font-size: 12px;
+  background-color: #F2F2F2; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul,
+ol,
+span {
+  margin: 0;
+  padding: 0; }
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0; }
+
+input,
+button {
+  border: none; }
+  input:focus,
+  button:focus {
+    outline: none; }
+
+::-moz-selection {
+  background-color: #F45C43;
+  color: #ffffff; }
+
+::selection {
+  background-color: #F45C43;
+  color: #ffffff; }
+
+@media screen and (min-width: 768px) {
+  html,
+  body {
+    font-size: 14px; } }
+
+@media screen and (min-width: 992px) {
+  html,
+  body {
+    font-size: 15px; } }
+
+@media screen and (min-width: 1200px) {
+  html,
+  body {
+    font-size: 16px; } }
+
+/*------------- UTILITIES IMPORT -------------*/
+/*------------- UTILITY CLASSES -------------*/
+/*------------- MODULES IMPORT -------------*/
+/*------------- TABLE OF CONTENTS -------------*/
+/*
+
+    1. HEADER
+    2. CONTENT
+    3. CALIGRAFIA
+    4. PRUEBAS
+
+*/
+/*------------- 1. HEADER -------------*/
+.header {
+  background: linear-gradient(45deg, #EB3349 0%, #EB3349 0%, #EB3349 0%, #F45C43 100%);
+  padding: 0;
+  color: #ffffff; }
+  .header__title-wrapper {
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #F2F2F2;
+    padding: 1rem 1.5625rem; }
+  .header__title {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-family: "Reef", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .header__arrow {
+    position: absolute;
+    top: 50%;
+    left: 1.5625rem;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer; }
+  .header__content {
+    padding: 1rem 1.5625rem; }
+  .header__caligrafia {
+    text-align: center; }
+    .header__caligrafia-tema-wrapper, .header__caligrafia-puntaje-wrapper {
+      display: inline-block;
+      text-align: center; }
+    .header__caligrafia-tema-wrapper {
+      padding: 0 1.25rem 0 0;
+      border-right: 1px solid #F2F2F2; }
+    .header__caligrafia-puntaje-wrapper {
+      padding: 0 0 0 1.25rem; }
+    .header__caligrafia-label {
+      font-family: "Reef", sans-serif;
+      font-size: 2rem;
+      color: #F2F2F2;
+      margin-bottom: 0.3rem; }
+    .header__caligrafia-valor {
+      font-family: "Reef", sans-serif;
+      font-size: 1.25rem;
+      color: #F2F2F2;
+      text-transform: uppercase;
+      letter-spacing: 1px; }
+
+/*------------- 2. CONTENT -------------*/
+.content__row {
+  padding: 0 1.5625rem; }
+
+.content__label {
+  font-family: "Reef", sans-serif;
+  font-size: 1.5rem;
+  color: #4F505A;
+  margin: 1.25rem 0; }
+
+/*------------- 3. CALIGRAFIA -------------*/
+.caligrafia {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  height: 400px;
+  position: relative;
+  z-index: 2; }
+
+/*------------- 4. PRUEBAS -------------*/
+.pruebas {
+  position: relative; }
+  .pruebas__progreso {
+    margin-top: 1rem;
+    width: 100%;
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    position: relative; }
+    .pruebas__progreso-completado {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60%;
+      background: linear-gradient(45deg, #EB3349 0%, #EB3349 0%, #EB3349 0%, #F45C43 100%);
+      height: 5px;
+      border-radius: 3px; }
+  .pruebas__caligrafia {
+    position: relative; }
+  .pruebas__reiniciar {
+    position: absolute;
+    z-index: 3;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background: linear-gradient(45deg, #EB3349 0%, #EB3349 0%, #EB3349 0%, #F45C43 100%);
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+    .pruebas__reiniciar-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      color: #ffffff; }
+  .pruebas__acciones {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+    .pruebas__acciones-btn {
+      font-family: "Reef", sans-serif;
+      font-size: 1.5rem;
+      padding: 0;
+      outline: none;
+      border: 0;
+      width: 50%;
+      float: left;
+      height: 50px; }
+      .pruebas__acciones-btn--line {
+        background-color: #ffffff;
+        border: 2px solid #EB3349;
+        border-bottom-left-radius: 0.5rem;
+        color: #EB3349; }
+      .pruebas__acciones-btn--full {
+        background: linear-gradient(45deg, #EB3349 0%, #EB3349 0%, #EB3349 0%, #F45C43 100%);
+        border-bottom-right-radius: 0.5rem;
+        color: #ffffff; }
+  .pruebas__mensaje {
+    font-size: 2rem;
+    color: #ffffff;
+    font-family: "Reef", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em; }
+    .pruebas__mensaje-wrapper {
+      position: absolute;
+      z-index: 4;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%) scale(0);
+      -ms-transform: translate(-50%, -50%) scale(0);
+      transform: translate(-50%, -50%) scale(0);
+      width: 80%;
+      padding: 3rem 2rem;
+      background: linear-gradient(45deg, #EB3349 0%, #EB3349 0%, #EB3349 0%, #F45C43 100%);
+      border-radius: 0.5rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      opacity: 0;
+      transition: all .25s; }
+      .pruebas__mensaje-wrapper--active {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1); }

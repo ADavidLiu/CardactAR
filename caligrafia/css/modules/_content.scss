@@ -1,0 +1,11 @@
+.content {
+    &__row {
+        padding: 0 1.5625rem;
+    }
+    &__label {
+        font-family: $bold;
+        font-size: 1.5rem;
+        color: $text;
+        margin: 1.25rem 0;
+    }
+}

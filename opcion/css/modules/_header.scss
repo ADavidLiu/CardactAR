@@ -1,0 +1,58 @@
+.header {
+    background: $gradient;
+    padding: 0;
+    color: $white;
+    &__title-wrapper {
+        text-align: center;
+        position: relative;
+        border-bottom: 1px solid $bg;
+        padding: 1rem 1.5625rem;
+    }
+    &__title {
+        display: inline-block;
+        font-size: 1.25rem;
+        font-family: $bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        left: 1.5625rem;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    &__content {
+        padding: 1rem 1.5625rem;
+    }
+    &__caligrafia {
+        text-align: center;
+        &-tema,
+        &-puntaje {
+            &-wrapper {
+                display: inline-block;
+                text-align: center;
+            }
+        }
+        &-tema-wrapper {
+            padding: 0 1.25rem 0 0;
+            border-right: 1px solid $bg;
+        }
+        &-puntaje-wrapper {
+            padding: 0 0 0 1.25rem;
+        }
+        &-label {
+            font-family: $bold;
+            font-size: 2rem;
+            color: $bg;
+            margin-bottom: 0.3rem;
+        }
+        &-valor {
+            font-family: $bold;
+            font-size: 1.25rem;
+            color: $bg;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+}

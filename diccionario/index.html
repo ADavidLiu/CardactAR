@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caligrafía</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header class="container-fluid header">
+        <div class="row">
+            <div class="col-xs-12 header__info">
+                <div class="header__title-wrapper">
+                    <i class="fa fa-chevron-left header__arrow" aria-hidden="true"></i>
+                    <h1 class="header__title">Diccionario</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container content">
+        <div class="row content__row">
+            <div class="diccionario">
+                <div class="diccionario__search">
+                    <div class="diccionario__search-input-group">
+                        <input type="text" class="diccionario__search-input" placeholder="Buscar...">
+                        <i class="fa fa-search diccionario__search-icon" aria-hidden="true"></i>
+                    </div>
+                    <div class="diccionario__search-actions">
+                        <ul class="list-inline diccionario__search-actions-list">
+                            <li class="diccionario__search-actions-item diccionario__search-actions-item--filter"><i class="fa fa-sliders diccionario__search-actions-icon" aria-hidden="true"></i></li>
+                            <li class="diccionario__search-actions-item diccionario__search-actions-item--sort"><i class="fa fa-sort-alpha-desc diccionario__search-actions-icon" aria-hidden="true"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="diccionario__resultados">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/modules/cjst.js.js"></script>
+    <script src="js/modules/jquery.voicerss-tts.min.js"></script>
+    <script src="js/diccionario.js"></script>
+
+</body>
+
+</html>
