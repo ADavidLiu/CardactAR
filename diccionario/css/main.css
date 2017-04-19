@@ -185,7 +185,20 @@ button {
       color: #4F505A;
       line-height: 30px; }
   .diccionario__resultados {
-    margin-top: 2rem; }
+    padding: 2rem 0;
+    border-bottom: 1px solid #EB3349; }
+    .diccionario__resultados-titulo {
+      font-family: "Reef", sans-serif;
+      font-size: 2rem;
+      color: #4F505A;
+      margin-bottom: 1.5rem; }
+  .diccionario__relacionadas {
+    padding: 2rem 0; }
+    .diccionario__relacionadas-titulo {
+      font-family: "Reef", sans-serif;
+      font-size: 2rem;
+      color: #4F505A;
+      margin-bottom: 1.5rem; }
 
 /*------------- 4. PALABRA -------------*/
 .palabra {
