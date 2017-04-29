@@ -6,7 +6,8 @@ $(document).ready(function () {
 
     $input.change(function (e) {
         var palabra = $input.val();
-        buscarPalabra(palabra);
+        buscarPalabra(palabra, $resultados);
+        buscarRelacionadas(palabra);
     });
 
     $input.focusin(function (e) {
@@ -20,12 +21,12 @@ $(document).ready(function () {
 
     var $caracter = $(".palabra__caracter");
 
-    function buscarPalabra(palabra) {
+    function buscarPalabra(palabra, $padre) {
         // Se traduce la palabra a caracter
         $.post("https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20170321T235648Z.3193900a2fbf206f.5f78e83dd4de5da554f974b1976faff175639c28&text=" + palabra + "&lang=es-zh", function (res) {
             var caracter = res.text[0];
             // Se crea la estructura para el template de la palabra
-            var $palabra = crearTemplate($resultados);
+            var $palabra = crearTemplate($padre);
             $palabra.find(".palabra__caracter").text(caracter);
             // Se traduce a pinyin
             var pinyin = cjst.chineseToPinyin(caracter).join(' ');
@@ -39,26 +40,24 @@ $(document).ready(function () {
                 var traduccionIngles = res.text[0].toLowerCase();
                 // Muestra el significado
                 definirPalabra(traduccionIngles, $palabra.find(".palabra__info-item-value--significado"));
-                // Muestra las palabras relacionadas
-                var relacionadas = buscarRelacionadas(traduccionIngles, caracter, pinyin);
-                console.log(relacionadas);
-                for (var i = 0; i < relacionadas.length; i++) {
-                    var $palabraRelacionada = crearTemplate($relacionadas);
-                    definirPalabra(relacionadas[i], $palabraRelacionada.find(".palabra__info-item-value--significado"));
-                }
             });
         });
     }
 
-    function buscarRelacionadas(traduccionIngles) {
-        var relacionadas = [];
-        $.get("https://api.datamuse.com/words?ml=" + traduccionIngles, function (res) {
-            for (var i = 0; i < res.length/4; i++) {
-                var palabra = res[i].word;
-                relacionadas[i] = palabra;
-            }
-        })
-        return relacionadas;
+    function buscarRelacionadas(palabra) {
+        $.post("https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20170321T235648Z.3193900a2fbf206f.5f78e83dd4de5da554f974b1976faff175639c28&text=" + palabra + "&lang=es-en", function (res) {
+            var traduccionIngles = res.text[0];
+            var relacionadas = [];
+            $.get("https://api.datamuse.com/words?ml=" + traduccionIngles, function (res) {
+                for (var i = 0; i < res.length / 4; i++) {
+                    var palabraRelacionada = res[i].word;
+ $.post("https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20170321T235648Z.3193900a2fbf206f.5f78e83dd4de5da554f974b1976faff175639c28&text=" + palabraRelacionada + "&lang=en-es", function (res) {
+                        var palabraRelacionadaEsp = res.text[0];
+                        buscarPalabra(palabraRelacionadaEsp, $relacionadas);
+                    });
+                }
+            });
+        });
     }
 
     function crearTemplate($padre) {
