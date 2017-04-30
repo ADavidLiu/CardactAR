@@ -3,8 +3,11 @@ $(document).ready(function () {
     var prueba = {
         caracter: "猫",
         respuesta: "gato",
-        opciones: ["Perro", "Gato", "Caballo", "León"]
+        opciones: ["Perro", "Gato", "Caballo", "León"],
+        tiempo: 10
     }
+    
+    var puntaje = 0;
 
     var $pinyin = $(".opcion__pinyin");
     var $caracter = $(".opcion__caracter");
@@ -81,14 +84,41 @@ $(document).ready(function () {
         if (respuesta == prueba.respuesta) {
             console.log("Correcto");
             mostrarMensaje("Correcto!", 1000);
+            calcularPuntaje();
         } else {
             console.log("Incorrecto");
             mostrarMensaje("Incorrecto!", 1000);
+            puntaje = 0;
+            clearInterval(timer);
             setTimeout(function () {
                 mostrarMensaje("Respuesta: " + prueba.respuesta, 1500);
                 clearTimeout(this);
             }, 1500);
         }
+    }
+    
+    function calcularPuntaje() {
+        puntaje = tiempo;
+        console.log(puntaje);
+        clearInterval(timer);
+    }
+    
+    var $tiempoRestante = $(".opcion__tiempo-restante");
+    var tiempo = prueba.tiempo;
+    $tiempoRestante.text(tiempo);
+    
+    var timer = setInterval(function () {
+        disminuirTiempo();
+    }, 1000);
+    
+    function disminuirTiempo() {
+        if (tiempo > 0) {
+            tiempo--;
+        } else {
+            tiempo = 0;
+            clearInterval(timer);
+        }
+        $tiempoRestante.text(tiempo);
     }
 
 });

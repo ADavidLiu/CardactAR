@@ -302,3 +302,10 @@ button {
       background: linear-gradient(45deg, #EB3349 0%, #EB3349 0%, #EB3349 0%, #F45C43 100%);
       height: 5px;
       border-radius: 3px; }
+  .opcion__tiempo {
+    font-family: "Reef", sans-serif;
+    color: #4F505A;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem; }
+    .opcion__tiempo-restante {
+      color: #EB3349; }
