@@ -1,0 +1,12 @@
+.vision {
+    padding: 2rem;
+    text-align: center;
+    &__img {
+        margin-bottom: 2rem;
+    }
+    &__list {
+        &-wrapper {
+            text-align: left;
+        }
+    }
+}
