@@ -4,6 +4,14 @@ $(document).ready(function () {
         'OdH230mD2z9Ur9bOPUclmAjpn0kcw78-zX6eNzkU',
         'aRE8NXX8UttRE3r5cuw0U_SvoRCpdVLSsHlsTEPF'
     );
+    
+    var base64Recibida;
+    
+    var recibirBase64 = function () {
+        base64Recibida = android.getData();
+        $(".vision__img").attr("src", base64Recibida);
+        console.log("******************* DESDE JAVASCRIPT ****************");
+    }
 
     function getBase64Image(img) {
         var canvas = document.createElement("canvas");
@@ -25,7 +33,7 @@ $(document).ready(function () {
     }
 
     app.models.predict(Clarifai.GENERAL_MODEL, {
-        base64: base64
+        base64: base64Recibida
     }).then(
         function (response) {
             console.log(response);
@@ -39,11 +47,5 @@ $(document).ready(function () {
             console.error(err);
         }
     );
-
-    var showData = function () {
-        var data = android.getData();
-        data = JSON.parse(data);
-        window.alert("Hello! Data are: " + data + "; first = " + data[0]);
-    }
 
 });

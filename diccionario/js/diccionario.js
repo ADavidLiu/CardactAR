@@ -35,6 +35,10 @@ $(document).ready(function () {
             $palabra.find(".palabra__info-item-play").click(function () {
                 pronunciar(caracter);
             });
+            // Envia el caracter a Android
+            $palabra.click(function () {
+                enviarCaracter(caracter);
+            });
             // Se realiza la traducción
             $.post("https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20170321T235648Z.3193900a2fbf206f.5f78e83dd4de5da554f974b1976faff175639c28&text=" + palabra + "&lang=es-en", function (res) {
                 var traduccionIngles = res.text[0].toLowerCase();
@@ -92,6 +96,11 @@ $(document).ready(function () {
                 }
             });
         });
+    }
+    
+    var enviarCaracter = function (caracter) {
+        //alert(caracter);
+        android.setData(caracter);
     }
 
 });

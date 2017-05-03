@@ -86,4 +86,10 @@ $(document).ready(function () {
         });
     }
 
+    var recibirCaracter = function () {
+        var caracterRecibido = android.getData();
+        alert(caracterRecibido);
+        caracter = caracterRecibido;
+    }
+
 });
