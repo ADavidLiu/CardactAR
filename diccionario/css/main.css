@@ -78,7 +78,10 @@ button {
 .header {
   background: linear-gradient(45deg, #EB3349 0%, #EB3349 0%, #EB3349 0%, #F45C43 100%);
   padding: 0;
-  color: #ffffff; }
+  color: #ffffff;
+  position: fixed;
+  width: 100%;
+  z-index: 99999; }
   .header__title-wrapper {
     text-align: center;
     position: relative;
@@ -123,14 +126,15 @@ button {
       letter-spacing: 1px; }
 
 /*------------- 2. CONTENT -------------*/
-.content__row {
-  padding: 0 1.5625rem; }
-
-.content__label {
-  font-family: "Reef", sans-serif;
-  font-size: 1.5rem;
-  color: #4F505A;
-  margin: 1.25rem 0; }
+.content {
+  padding-top: 44px; }
+  .content__row {
+    padding: 0 1.5625rem; }
+  .content__label {
+    font-family: "Reef", sans-serif;
+    font-size: 1.5rem;
+    color: #4F505A;
+    margin: 1.25rem 0; }
 
 /*------------- 3. DICCIONARIO -------------*/
 .diccionario {

@@ -2,6 +2,9 @@
     background: $gradient;
     padding: 0;
     color: $white;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
     &__title-wrapper {
         text-align: center;
         position: relative;
